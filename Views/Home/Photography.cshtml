@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "Photography";
+}
+
+<div id="colorlib-main">
+			<section class="ftco-section-2">
+				<div class="photograhy">
+					<div class="row no-gutters">
+                        @foreach(var num in Enumerable.Range(1,12))
+                        {
+                            <div class="col-md-3">
+							<a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url('@Url.Content($"~/images/image_{num}.jpg")');" >
+								<div class="overlay"></div>
+								<div class="text text-center">
+									<h3>Work @num.ToString("00")</h3>
+									<span>Technology</span>
+								</div>
+							</a>
+						</div>
+                        }
+
+					</div>
+				</div>
+			</section>
+	    <partial name="footer"/>
+		</div>
